@@ -1,3 +1,22 @@
 import 'dotenv/config';
+import { Client, GatewayIntentBits } from 'discord.js';
 
-console.log('Bot process started');
+const token = process.env.DISCORD_TOKEN;
+
+if (!token) {
+  console.error('DISCORD_TOKEN is missing in .env');
+  process.exit(1);
+}
+
+const client = new Client({
+  intents: [GatewayIntentBits.Guilds],
+});
+
+client.once('ready', () => {
+  console.log(`Logged in as ${client.user?.tag}`);
+});
+
+client.login(token).catch((err) => {
+  console.error('Failed to login:', err);
+  process.exit(1);
+});
