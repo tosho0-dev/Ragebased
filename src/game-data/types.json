@@ -1,0 +1,83 @@
+{
+  "types": [
+    {
+      "name": "Dad",
+      "role": "Tank",
+      "baseStats": { "hp": 24, "defense": 20, "attack": 10, "mind": 18, "speed": 8, "luck": 8, "intelligence": 10, "spellEnergy": 12 }
+    },
+    {
+      "name": "Drunkard",
+      "role": "Tank",
+      "baseStats": { "hp": 26, "defense": 16, "attack": 12, "mind": 8, "speed": 7, "luck": 16, "intelligence": 6, "spellEnergy": 10 }
+    },
+    {
+      "name": "Workaholic",
+      "role": "Tank",
+      "baseStats": { "hp": 22, "defense": 22, "attack": 8, "mind": 20, "speed": 10, "luck": 6, "intelligence": 14, "spellEnergy": 14 }
+    },
+    {
+      "name": "Gym Rat",
+      "role": "Tank",
+      "baseStats": { "hp": 22, "defense": 18, "attack": 16, "mind": 10, "speed": 14, "luck": 8, "intelligence": 6, "spellEnergy": 8 }
+    },
+
+    {
+      "name": "Stoner",
+      "role": "Healer",
+      "baseStats": { "hp": 16, "defense": 10, "attack": 6, "mind": 14, "speed": 8, "luck": 12, "intelligence": 20, "spellEnergy": 22 }
+    },
+    {
+      "name": "Divorced",
+      "role": "Healer",
+      "baseStats": { "hp": 18, "defense": 12, "attack": 7, "mind": 18, "speed": 9, "luck": 8, "intelligence": 20, "spellEnergy": 20 }
+    },
+    {
+      "name": "Conspiracy Theorist",
+      "role": "Healer",
+      "baseStats": { "hp": 15, "defense": 9, "attack": 6, "mind": 22, "speed": 10, "luck": 10, "intelligence": 18, "spellEnergy": 18 }
+    },
+    {
+      "name": "Looksmaxxer",
+      "role": "Healer",
+      "baseStats": { "hp": 17, "defense": 10, "attack": 8, "mind": 12, "speed": 16, "luck": 16, "intelligence": 16, "spellEnergy": 16 }
+    },
+
+    {
+      "name": "Unemployed",
+      "role": "DPS",
+      "baseStats": { "hp": 16, "defense": 8, "attack": 22, "mind": 10, "speed": 16, "luck": 8, "intelligence": 10, "spellEnergy": 10 }
+    },
+    {
+      "name": "MMA Fan",
+      "role": "DPS",
+      "baseStats": { "hp": 18, "defense": 10, "attack": 24, "mind": 12, "speed": 14, "luck": 6, "intelligence": 6, "spellEnergy": 8 }
+    },
+    {
+      "name": "Crypto Trader",
+      "role": "DPS",
+      "baseStats": { "hp": 14, "defense": 7, "attack": 18, "mind": 14, "speed": 16, "luck": 20, "intelligence": 18, "spellEnergy": 16 }
+    },
+    {
+      "name": "Ragebaiter",
+      "role": "DPS",
+      "baseStats": { "hp": 16, "defense": 8, "attack": 20, "mind": 12, "speed": 18, "luck": 12, "intelligence": 10, "spellEnergy": 12 }
+    }
+  ],
+
+  "multipliers": {
+    "Dad": { "Unemployed": 1.3 },
+    "Workaholic": { "Stoner": 1.2 },
+    "Gym Rat": { "Looksmaxxer": 1.2 },
+
+    "Unemployed": { "Divorced": 1.2 },
+    "MMA Fan": { "Gym Rat": 1.1 },
+    "Crypto Trader": { "Conspiracy Theorist": 1.3 },
+    "Ragebaiter": { "Dad": 1.2 },
+
+    "Stoner": { "Dad": 1.1 },
+    "Divorced": { "Workaholic": 1.2 },
+    "Conspiracy Theorist": { "Crypto Trader": 1.2 },
+    "Looksmaxxer": { "MMA Fan": 1.1 }
+  },
+  "defaultMultiplier": 1.0
+}

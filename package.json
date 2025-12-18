@@ -6,20 +6,26 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "deploy:commands": "ts-node-dev --transpile-only src/deploy-commands.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@prisma/adapter-pg": "^7.2.0",
+    "@prisma/client": "^7.2.0",
     "discord.js": "^14.25.1",
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.2.3",
+    "pg": "^8.16.3"
   },
   "devDependencies": {
+    "@prisma/config": "^7.2.0",
     "@types/node": "^25.0.3",
     "eslint": "^9.39.2",
     "prettier": "^3.7.4",
+    "prisma": "^7.2.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   },

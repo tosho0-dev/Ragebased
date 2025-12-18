@@ -1,0 +1,106 @@
+{
+  "elements": [
+    "Fire",
+    "Water",
+    "Earth",
+    "Lightning",
+    "Wind",
+    "Light",
+    "Psychic",
+    "Blood",
+    "Void"
+  ],
+  "multipliers": {
+    "Fire": {
+      "Water": 0.8,
+      "Earth": 1.2,
+      "Lightning": 1.0,
+      "Wind": 1.1,
+      "Light": 1.0,
+      "Psychic": 1.0,
+      "Blood": 1.1,
+      "Void": 1.0
+    },
+    "Water": {
+      "Fire": 1.2,
+      "Earth": 1.0,
+      "Lightning": 0.9,
+      "Wind": 0.9,
+      "Light": 1.0,
+      "Psychic": 1.0,
+      "Blood": 0.8,
+      "Void": 1.0
+    },
+    "Earth": {
+      "Fire": 0.8,
+      "Water": 1.0,
+      "Lightning": 1.2,
+      "Wind": 0.7,
+      "Light": 1.0,
+      "Psychic": 0.9,
+      "Blood": 1.1,
+      "Void": 1.0
+    },
+    "Lightning": {
+      "Fire": 1.0,
+      "Water": 1.1,
+      "Earth": 0.8,
+      "Wind": 1.2,
+      "Light": 1.0,
+      "Psychic": 0.9,
+      "Blood": 1.0,
+      "Void": 1.0
+    },
+    "Wind": {
+      "Fire": 0.9,
+      "Water": 1.1,
+      "Earth": 1.3,
+      "Lightning": 0.8,
+      "Light": 1.0,
+      "Psychic": 1.0,
+      "Blood": 0.9,
+      "Void": 1.0
+    },
+    "Light": {
+      "Fire": 1.0,
+      "Water": 1.0,
+      "Earth": 1.0,
+      "Lightning": 1.0,
+      "Wind": 1.0,
+      "Psychic": 1.2,
+      "Blood": 1.3,
+      "Void": 0.7
+    },
+    "Psychic": {
+      "Fire": 1.0,
+      "Water": 1.0,
+      "Earth": 1.1,
+      "Lightning": 1.1,
+      "Wind": 1.0,
+      "Light": 0.8,
+      "Blood": 1.2,
+      "Void": 0.9
+    },
+    "Blood": {
+      "Fire": 0.9,
+      "Water": 1.2,
+      "Earth": 0.9,
+      "Lightning": 1.0,
+      "Wind": 1.1,
+      "Light": 0.7,
+      "Psychic": 0.8,
+      "Void": 1.2
+    },
+    "Void": {
+      "Fire": 1.0,
+      "Water": 1.0,
+      "Earth": 1.0,
+      "Lightning": 1.0,
+      "Wind": 1.0,
+      "Light": 1.3,
+      "Psychic": 1.1,
+      "Blood": 0.8,
+      "Void": 1.0
+    }
+  }
+}

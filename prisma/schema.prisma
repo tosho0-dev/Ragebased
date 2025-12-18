@@ -1,0 +1,71 @@
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model UserProfile {
+  id           String   @id @default(cuid())
+  userId       String   @unique
+  battleTokens Int      @default(0)
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  cards        Card[]
+}
+
+model Card {
+  id             String   @id @default(cuid())
+
+  // Discord user who owns the card
+  userId         String
+
+  // User-chosen display name for the card
+  alias          String
+
+  // Selected by user
+  type           String
+  role           String
+
+  // Randomly assigned on creation
+  element        String
+
+  level          Int @default(1)
+  xp             Int @default(0)
+  unspentPoints  Int @default(0)
+
+  baseHp         Int
+  baseDefense    Int
+  baseAttack     Int
+  baseMind       Int
+  baseSpeed      Int
+  baseLuck       Int
+  baseIntelligence Int
+  baseSpellEnergy  Int
+
+  allocHp         Int @default(0)
+  allocDefense    Int @default(0)
+  allocAttack     Int @default(0)
+  allocMind       Int @default(0)
+  allocSpeed      Int @default(0)
+  allocLuck       Int @default(0)
+  allocIntelligence Int @default(0)
+  allocSpellEnergy  Int @default(0)
+
+  wins           Int      @default(0)
+  losses         Int      @default(0)
+
+  // Skills will come next; store IDs later
+  skillIds       String[] @default([])
+  specialSkillId String   @default("")
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  profile        UserProfile @relation(fields: [userId], references: [userId])
+
+  @@index([userId])
+}
